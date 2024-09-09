@@ -13,3 +13,7 @@
 - [Air](https://github.com/air-verse/air)
 
 - [Templ](https://templ.guide/quick-start/installation/)
+
+- [Docker](https://docs.docker.com/get-docker/)
+
+- [Postgres](https://www.postgresql.org/)
