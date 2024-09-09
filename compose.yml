@@ -2,6 +2,8 @@ services:
   db:
     image: postgres:latest
     container_name: postgrestest
+    ports:
+    - "5432:5432"
     environment:
       POSTGRES_USER: myUser
       POSTGRES_PASSWORD: myPassword
