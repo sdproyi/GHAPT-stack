@@ -2,13 +2,13 @@
 
 ### everything you need to run this project
 
-- [Vscode](https://code.visualstudio.com/)
+- [VScode](https://code.visualstudio.com/)
 
 - [Bun](https://bun.sh/)
 
 - [Tailwind](https://tailwindcss.com/)
 
-- [Htmx](https://htmx.org/)
+- [HTMX](https://htmx.org/)
 
 - [Air](https://github.com/air-verse/air)
 
