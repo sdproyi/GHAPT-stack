@@ -1,0 +1,6 @@
+node_modules
+tmp/build-errors.log
+bin/task
+tmp/*
+templates/components/*.txt
+.env

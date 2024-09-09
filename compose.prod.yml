@@ -1,0 +1,34 @@
+services:
+  app:
+    image: linkedtopgo:latest
+    container_name: GHAPT-stack
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - POSTGRES_HOST=db
+      - POSTGRES_PASSWORD=myPassword
+      - POSTGRES_USER=myUser
+      - POSTGRES_DB=myDatabase
+      - POSTGRES_PORT=5432
+      - POSTGRES_SSLMODE=disable
+
+  db:
+    image: postgres:latest
+    container_name: postgrestest
+    environment:
+      POSTGRES_USER: myUser
+      POSTGRES_PASSWORD: myPassword
+      POSTGRES_DB: myDatabase
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U myUser -d myDatabase"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+volumes:
+  postgres_data:
